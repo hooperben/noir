@@ -22,7 +22,7 @@ global MAX_LOAD_FACTOR_DEN0MINATOR = 4;
 /// ```noir
 /// // Create a mapping from Fields to u32s with a maximum length of 12
 /// // using a poseidon2 hasher
-/// use std::hash::poseidon2::Poseidon2Hasher;
+/// use std::{hash::{poseidon2::Poseidon2Hasher, BuildHasherDefault}, collections::map::HashMap};
 /// let mut map: HashMap<Field, u32, 12, BuildHasherDefault<Poseidon2Hasher>> = HashMap::default();
 ///
 /// map.insert(1, 2);
